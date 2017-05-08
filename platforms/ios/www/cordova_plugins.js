@@ -201,11 +201,11 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-device": "1.1.6",
+    "cordova-plugin-whitelist": "1.3.2",
+    "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-file": "4.3.3",
-    "cordova-plugin-media": "3.0.1",
-    "cordova-plugin-whitelist": "1.3.2"
+    "cordova-plugin-media": "3.0.1"
 };
 // BOTTOM OF METADATA
 });

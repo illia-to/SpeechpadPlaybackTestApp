@@ -8,22 +8,22 @@
     },
     "installed_plugins": {
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "io.speechpad.playback.hellocordova"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.speechpad.playback.hellocordova"
         },
         "cordova-plugin-media": {
             "MICROPHONE_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "io.speechpad.playback.hellocordova"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "io.speechpad.playback.hellocordova"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "io.speechpad.playback.hellocordova"
         }
     }
 }

@@ -14,23 +14,23 @@ MediaPlayer.prototype.updateBar = function () {
   var durationTitle = that.container.querySelector("span[name=duration]");
 
   return setInterval(function () {
-    that.media.getCurrentAmplitude(
-      // success callback
-      function (amp) {
-        that.duration = that.media.getDuration();
+      that.media.getCurrentPosition(
+          // success callback
+          function (sec) {
+            that.duration = that.media.getDuration();
 
-        // Duration can be -1 if file is not played
-        var correctDuration = that.duration > 0 ? that.duration : 0;
+            // Duration can be -1 if file is not played
+    			  var correctDuration = that.duration > 0 ? that.duration : 0;
 
-        durationTitle.innerText = correctDuration.toString();
-        that.progressBar.max = correctDuration;
-        that.progressBar.value = that.media._position;
-      },
-      function (e) {
-        console.log("Error getting pos=" + e);
-      }
-    );
-  }, 1000);
+            durationTitle.innerText = correctDuration.toString();
+            that.progressBar.max = correctDuration;
+            that.progressBar.value = sec;
+          },
+          function (e) {
+            console.log("Error getting pos=" + e);
+          }
+        );
+      }, 1000);
 }
 
 MediaPlayer.prototype.playPause = function () {
@@ -55,7 +55,7 @@ MediaPlayer.prototype.stop = function () {
   clearInterval(this.barInterval);
 }
 
-MediaPlayer.prototype.seek = function () {
+MediaPlayer.prototype.seek =  function () {
   var seekInput = this.container.querySelector('input');
   var goToSecond = seekInput.value;
   if (goToSecond && parseInt(goToSecond)) {
@@ -68,7 +68,7 @@ MediaPlayer.prototype.seek = function () {
 
 }
 
-MediaPlayer.prototype.startRecord = function () {
+MediaPlayer.prototype.startRecord =  function () {
   this.media.startRecord();
 }
 
