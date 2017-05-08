@@ -33,6 +33,8 @@ In Xcode check your certificate:
 check `Automatiaclly manage signing`
 and  `team`
 
+Connect your device and press play button
+
 ### Plugins
 
 | Plugin | README |
